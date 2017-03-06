@@ -28,7 +28,7 @@ apt-get install git curl zsh
 curl -sSL https://get.daocloud.io/docker | sh
 wget https://get.daocloud.io/docker/compose/releases/download/1.9.0/docker-compose-`uname -s`-`uname -m`  -O /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
-sudo docker login --username=gonbo@aliyun.com registry.cn-hangzhou.aliyuncs.com
+docker login --username=gonbo@aliyun.com registry.cn-hangzhou.aliyuncs.com
 
 su haobtc && cd ~
 echo "set ts=4
