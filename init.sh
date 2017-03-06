@@ -11,6 +11,7 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
   sed -i 's/^\(PermitRootLogin \).*/\1no/' /etc/ssh/sshd_config
+  service ssh restart
 fi
 
 
@@ -30,7 +31,8 @@ wget https://get.daocloud.io/docker/compose/releases/download/1.9.0/docker-compo
 chmod +x /usr/local/bin/docker-compose
 docker login --username=gonbo@aliyun.com registry.cn-hangzhou.aliyuncs.com
 
-su haobtc && cd ~
+su - haobtc 
+cd ~
 echo "set ts=4
 set expandtab
 " > /home/haobtc/.vimrc
